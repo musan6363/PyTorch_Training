@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "test"
+version = "0.1.0"
+description = ""
+authors = ["murakamih <murakamih@vislab.is.i.nagoya-u.ac.jp>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+torch = { version = "=1.12.1+cu113", source = "pytorch-cu113" }
+torchvision = { version = "=0.13.1+cu113", source = "pytorch-cu113" }
+
+[[tool.poetry.source]]
+name = "pytorch-cu113"
+url = "https://download.pytorch.org/whl/cu113/"
+secondary = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
